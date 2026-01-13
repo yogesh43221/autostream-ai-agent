@@ -1,0 +1,31 @@
+{
+    "plans": {
+        "basic": {
+            "name": "Basic Plan",
+            "price": "$29/month",
+            "videos": "10 videos/month",
+            "resolution": "720p",
+            "description": "The Basic plan costs $29 per month and allows you to create up to 10 videos per month with 720p resolution."
+        },
+        "pro": {
+            "name": "Pro Plan",
+            "price": "$79/month",
+            "videos": "Unlimited videos",
+            "resolution": "4K",
+            "features": [
+                "AI captions"
+            ],
+            "description": "The Pro plan costs $79 per month and offers unlimited video creation with 4K resolution and AI-powered captions."
+        }
+    },
+    "policies": {
+        "refund": {
+            "title": "Refund Policy",
+            "description": "No refunds after 7 days. If you cancel within 7 days of purchase, you are eligible for a full refund."
+        },
+        "support": {
+            "title": "Customer Support",
+            "description": "24/7 support available only on Pro plan. Basic plan users have access to email support during business hours."
+        }
+    }
+}
