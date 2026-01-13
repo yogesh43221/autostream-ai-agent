@@ -56,6 +56,8 @@ python app/main.py
 
 ## 🏗️ Architecture
 
+![AutoStream AI Agent Architecture](architecture.png)
+
 ### Why LangGraph?
 
 This agent uses **LangGraph** for its state-driven, multi-node architecture that provides:
