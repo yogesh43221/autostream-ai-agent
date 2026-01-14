@@ -1,5 +1,7 @@
 # AutoStream Conversational Agent
 
+## 🎥 **[WATCH DEMO VIDEO](https://drive.google.com/file/d/1cD-yslgKUw3VrNdDvEDsaanQCws-DfTB/view?usp=drive_link)** 
+
 > **📌 Note to Reviewers:** This project was built as part of the ServiceHive assignment. I've gone beyond the base requirements to demonstrate my approach to production-ready AI systems. Key additions include: smart interruption handling during lead collection, comprehensive documentation ([LESSONS_LEARNED.md](LESSONS_LEARNED.md)), conversation analytics module, and detailed architecture explanations. The agent handles real-world edge cases while maintaining clean, maintainable code.
 
 ---
