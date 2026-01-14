@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-01-14T18:06:37.082305",
+    "turns": 9,
+    "lead_captured": true,
+    "lead_info": {
+      "name": "yogesh",
+      "email": "yogesh@example.com",
+      "platform": "Instagram"
+    },
+    "final_intent": "high_intent",
+    "completed": true
+  },
+  {
+    "timestamp": "2026-01-14T18:24:51.847944",
+    "turns": 9,
+    "lead_captured": true,
+    "lead_info": {
+      "name": "yogesh",
+      "email": "yogesh@example.com",
+      "platform": "YouTube"
+    },
+    "final_intent": "high_intent",
+    "completed": true
+  }
+]
