@@ -1,0 +1,10 @@
+You: hey there
+You: what are your pricing plans?
+You: is there anything cheaper than $29?
+You: okay, i want to try the basic plan
+You: wait, what's your refund policy?
+You: one more thing – what about support?
+You: okay, i’m yogesh
+You: yogesh@exmaple.com
+You: YouTube
+You: quit

@@ -22,5 +22,17 @@
     },
     "final_intent": "high_intent",
     "completed": true
+  },
+  {
+    "timestamp": "2026-01-14T20:09:05.744641",
+    "turns": 9,
+    "lead_captured": true,
+    "lead_info": {
+      "name": "yogesh",
+      "email": "yogesh@exmaple.com",
+      "platform": "YouTube"
+    },
+    "final_intent": "high_intent",
+    "completed": true
   }
 ]
