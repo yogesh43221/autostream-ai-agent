@@ -33,7 +33,10 @@ def intent_node(state: AgentState) -> AgentState:
     if state.get('collecting_lead', False):
         # Allow user to ask questions during lead collection
         # Detect if this is a question rather than providing info
-        question_indicators = ['?', 'what', 'how', 'why', 'when', 'where', 'tell me', 'explain']
+        question_indicators = [
+            '?', 'what', 'how', 'why', 'when', 'where', 
+            'tell me', 'explain', 'about', 'can you', 'could you'
+        ]
         is_question = any(indicator in last_message for indicator in question_indicators)
         
         if is_question:
