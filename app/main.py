@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
 from app.graph import create_graph
 from app.state import AgentState
+from app.analytics import ConversationAnalytics
 
 
 def main():
@@ -37,6 +38,9 @@ def main():
     print("(This may take a moment to load the embedding model)\n")
     
     graph = create_graph()
+    
+    # Initialize analytics tracker
+    analytics = ConversationAnalytics()
     
     # Initialize state
     state: AgentState = {
@@ -93,6 +97,9 @@ def main():
     if turn_count >= max_turns:
         print("\nMaximum conversation turns reached. Thank you for chatting!")
     
+    # Log session for analytics
+    analytics.log_session(state, turn_count)
+    
     print("\n" + "="*60)
     print("Conversation Summary:")
     print(f"Total turns: {turn_count}")
@@ -100,6 +107,9 @@ def main():
     if state.get('tool_called'):
         print(f"Lead info: {state.get('lead_info', {})}")
     print("="*60)
+    
+    # Show analytics (optional - can be disabled for cleaner output)
+    # analytics.print_report()
 
 
 if __name__ == "__main__":

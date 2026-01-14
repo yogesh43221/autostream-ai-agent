@@ -1,107 +1,210 @@
-# AutoStream Agent - Demo Script
+# 🎥 Enhanced Demo Video Script
 
-This script demonstrates all key features of the AutoStream conversational agent.
+## 📋 Overview
+This script will help you record a professional demo video that showcases not just the features, but also your technical thinking and communication skills.
 
-## Prerequisites
+**Length:** 2-3 minutes
+**Style:** Professional with optional voice-over
 
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
+---
+
+## 🎬 SCRIPT (With Voice-Over)
+
+### **Opening (15 seconds)**
+
+**[Show terminal ready to run]**
+
+**Voice-over:**
+> "Hi, I'm [Your Name]. I built this conversational AI agent for AutoStream as part of the ServiceHive assignment. What makes it different? Three things: it's truly conversational with smart interruption handling, it's zero-cost using Gemini's free tier and local embeddings, and it's production-ready with proper state management. Let me show you."
+
+---
+
+### **Scene 1: Start Agent (5 seconds)**
+
+**[Type and run]**
+```powershell
+.\run_agent.ps1
 ```
 
-2. Set up your Gemini API key:
-```bash
-cp .env.example .env
-# Edit .env and add your GOOGLE_API_KEY
+**[Wait for startup message]**
+
+---
+
+### **Scene 2: Greeting (10 seconds)**
+
+**[Type]**
+```
+Hi there!
 ```
 
-3. Run the agent:
-```bash
-python app/main.py
+**Voice-over (optional):**
+> "First, natural greetings."
+
+---
+
+### **Scene 3: RAG Demo - Pricing (20 seconds)**
+
+**[Type]**
+```
+What are your pricing plans?
 ```
 
----
+**[Wait for response showing Basic & Pro plans]**
 
-## Demo Flow
-
-### Turn 1: Greeting
-**You:** Hi there!
-
-**Expected Response:** Friendly greeting introducing AutoStream
+**Voice-over:**
+> "The agent uses RAG with local embeddings to retrieve accurate information from the knowledge base. Notice it loads the embedding model and performs semantic search."
 
 ---
 
-### Turn 2: Pricing Inquiry (RAG)
-**You:** What are your pricing plans?
+### **Scene 4: High-Intent Detection (15 seconds)**
 
-**Expected Response:** 
-- Basic Plan: $29/month, 10 videos/month, 720p
-- Pro Plan: $79/month, unlimited videos, 4K, AI captions
+**[Type]**
+```
+I want to try AutoStream
+```
 
----
+**[Wait for "May I have your name?"]**
 
-### Turn 3: Policy Question (RAG)
-**You:** What's your refund policy?
-
-**Expected Response:** No refunds after 7 days
+**Voice-over:**
+> "When it detects high intent, it automatically starts lead qualification."
 
 ---
 
-### Turn 4: High Intent Detection
-**You:** I want to try AutoStream
+### **Scene 5: Smart Interruption Handling (25 seconds)** ⭐ KEY DIFFERENTIATOR
 
-**Expected Response:** Agent asks for your name
+**[Type]**
+```
+Wait, what's your refund policy?
+```
 
----
+**[Wait for refund policy response]**
 
-### Turn 5: Provide Name
-**You:** John Doe
-
-**Expected Response:** Agent asks for email
-
----
-
-### Turn 6: Provide Email
-**You:** john@example.com
-
-**Expected Response:** Agent asks for platform
+**Voice-over:**
+> "Here's the key feature: users can ask questions mid-flow. The agent detects the question pattern, answers it, then resumes lead collection. This was the trickiest part to implement—maintaining context while allowing interruptions."
 
 ---
 
-### Turn 7: Provide Platform
-**You:** Instagram
+### **Scene 6: Resume Lead Collection (10 seconds)**
 
-**Expected Response:** 
-- Confirmation message
-- **Tool execution:** Console prints "Lead captured successfully: John Doe, john@example.com, Instagram"
+**[Agent should ask for name again]**
 
----
+**[Type]**
+```
+Okay, John Doe
+```
 
-## Verification Checklist
-
-- [ ] Agent responds to greetings appropriately
-- [ ] RAG answers are accurate and based on knowledge base
-- [ ] High intent triggers lead collection flow
-- [ ] Lead info is collected sequentially (name → email → platform)
-- [ ] Tool executes ONLY when all fields are present
-- [ ] Tool executes ONLY once (tool_called flag prevents duplicates)
-- [ ] Conversation state persists across 5-6+ turns
-- [ ] No paid APIs used (only Gemini free tier + local embeddings)
+**[Wait for email request]**
 
 ---
 
-## Alternative Test Scenarios
+### **Scene 7: Email Collection (10 seconds)**
 
-### Scenario 2: Direct High Intent
-**You:** I'm interested in signing up
+**[Type]**
+```
+john@example.com
+```
 
-**Expected:** Lead collection starts immediately
+**[Wait for platform request]**
 
-### Scenario 3: Multiple Inquiries
-**You:** Tell me about the Pro plan features
+---
 
-**Expected:** RAG response about Pro plan (4K, unlimited, AI captions)
+### **Scene 8: Tool Execution (20 seconds)**
 
-**You:** Do you have 24/7 support?
+**[Type]**
+```
+Instagram
+```
 
-**Expected:** RAG response (24/7 support only on Pro plan)
+**[Wait for tool execution]**
+
+**[IMPORTANT: Make sure this is visible]**
+```
+Lead captured successfully: John Doe, john@example.com, Instagram
+```
+
+**Voice-over:**
+> "Once all information is collected, the tool executes automatically. The agent uses a dual-flag system to ensure the tool is called exactly once."
+
+---
+
+### **Closing (15 seconds)**
+
+**[Type]**
+```
+quit
+```
+
+**Voice-over:**
+> "If I had more time, I'd add conversation analytics to track conversion rates and A/B test different approaches. The code is production-ready with comprehensive documentation including lessons learned and a clear path to WhatsApp integration. Thanks for watching!"
+
+---
+
+## 🎯 ALTERNATIVE: Silent Demo (No Voice-Over)
+
+If you prefer not to do voice-over, add text overlays at key moments:
+
+- **After greeting:** "Natural conversation handling"
+- **After RAG:** "Semantic search with local embeddings"
+- **After interruption:** "Smart question detection during lead collection"
+- **After tool execution:** "Automated lead capture with state management"
+
+---
+
+## 📝 KEY POINTS TO HIGHLIGHT
+
+1. ✅ **RAG working** - Show "Loading embedding model" message
+2. ✅ **High-intent detection** - Automatic transition to lead collection
+3. ✅ **Smart interruptions** - THE DIFFERENTIATOR!
+4. ✅ **Tool execution** - Console output clearly visible
+5. ✅ **Professional presentation** - Clean, confident delivery
+
+---
+
+## 🎥 RECORDING TIPS
+
+### **Before Recording:**
+- [ ] Close unnecessary applications
+- [ ] Clear terminal history
+- [ ] Test the full flow once
+- [ ] Ensure good lighting (if showing face)
+- [ ] Test microphone (if doing voice-over)
+- [ ] Disable notifications
+
+### **During Recording:**
+- [ ] Speak clearly and confidently
+- [ ] Type at normal speed (not too fast)
+- [ ] Pause briefly after each response
+- [ ] Make sure console output is readable
+- [ ] Don't rush - 2-3 minutes is perfect
+
+### **After Recording:**
+- [ ] Review the video
+- [ ] Check audio quality
+- [ ] Verify all 4 requirements are shown
+- [ ] Trim any dead space
+
+---
+
+## ✅ REQUIREMENTS CHECKLIST
+
+Your demo MUST show:
+- [x] Agent answering pricing question (RAG)
+- [x] Agent detecting high-intent
+- [x] Agent collecting user details (name, email, platform)
+- [x] Successful tool execution with console output
+
+**BONUS (Makes you stand out):**
+- [x] Smart interruption handling
+- [x] Professional voice-over explaining technical decisions
+- [x] Clear, confident presentation
+
+---
+
+## 🚀 YOU'RE READY!
+
+This enhanced script will make your demo stand out by showing:
+1. **Technical depth** - You understand the hard parts (state management, interruptions)
+2. **Communication skills** - You can explain complex concepts clearly
+3. **Product thinking** - You focus on user experience, not just features
+
+**Good luck!** 🎬
