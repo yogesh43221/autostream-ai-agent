@@ -26,10 +26,24 @@ def intent_node(state: AgentState) -> AgentState:
     Returns:
         Updated state with intent field
     """
+    # Get last user message first
+    last_message = state['messages'][-1].content.lower()
+    
     # Check if we're in the middle of lead collection
     if state.get('collecting_lead', False):
-        state['intent'] = 'high_intent'
-        return state
+        # Allow user to ask questions during lead collection
+        # Detect if this is a question rather than providing info
+        question_indicators = ['?', 'what', 'how', 'why', 'when', 'where', 'tell me', 'explain']
+        is_question = any(indicator in last_message for indicator in question_indicators)
+        
+        if is_question:
+            # User is asking a question - temporarily answer it
+            state['intent'] = 'inquiry'
+            return state
+        else:
+            # User is providing info - continue lead collection
+            state['intent'] = 'high_intent'
+            return state
     
     # Get last user message
     last_message = state['messages'][-1].content
